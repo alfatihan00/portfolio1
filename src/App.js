@@ -5,7 +5,6 @@ import About from './About';
 import Portfolio from './Portfolio';
 import Contact from './Contact';
 import {useState} from 'react'
-import HOC from './HOC'
 import Footer from './Footer'
 
 

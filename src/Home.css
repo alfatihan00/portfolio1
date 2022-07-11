@@ -34,7 +34,7 @@
     flex-grow: 1;
     position: relative;
     background-color: transparent;
-    justify-content: start;
+    justify-content: flex-start;
     display: flex;
     flex-direction: column;
     margin-left: 70px;
