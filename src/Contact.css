@@ -1,0 +1,204 @@
+.contact{
+    width: 100%;
+    z-index: 1;
+    display: flex;
+    flex-direction: row;
+    background-image: url(./bahan//Contact/kertas.svg);
+    padding-bottom: 120px;
+    position: relative;
+}
+
+.contact-container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-call{
+    width: 50px;
+    height: 50px;
+}
+
+.flex-input{
+    display: flex;
+    flex-direction: row;
+}
+
+.input-contact{
+    margin-left: 50px;
+    height: 40px;
+    font-weight: 600;
+    width: fit-content;
+    background-color: transparent;
+    border: 0;
+    font-size: 20px;
+}
+
+.name-contact{
+    margin-top:10px;
+}
+
+.email-contact{
+    margin-top: -10px;
+}
+
+.subject-contact{
+    margin-top: -10px;
+}
+
+.input-contact:focus{
+    border: 0;
+}
+
+.message{
+    font-size: 18px;
+}
+
+.input-message{
+    width:75%;
+    height: 150px;
+    text-align: start;
+}
+
+.textarea{
+    margin-left: 10px;
+    background-color: transparent;
+    width: 50%;
+    height: 130px;
+    font-size: 18px;
+    box-shadow: none;
+    border: 0;
+    padding: 5px;
+    line-height: 40px;
+}
+
+.send-message{
+    cursor: pointer;
+    margin-top: 30px;
+    right:-50px ;
+    top:485px;
+    height: 40px;
+    width:180px;
+    box-shadow: 0px 0px 4px 0px #4d4f4d99;
+    font-weight:600;
+    border: solid white;
+    background-color: white;
+    border-radius: 20px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    transition: all ease-in-out;
+}
+
+.send-message:hover{
+    background-color: black;
+    color: white;
+    border: 1px solid black;
+    transition: all ease-in-out;
+}
+
+.send-message:hover .message-icon{
+    filter: invert(99%) sepia(42%) saturate(0%) hue-rotate(135deg) brightness(115%) contrast(100%);
+}
+.message-icon{
+    margin-bottom: -5px;
+}
+
+.sosmed-contact{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin-top: 50px;
+    justify-content: center;
+}
+
+.sosmed-h1-contact{
+    font-weight: 600;
+    color: #000;
+    text-decoration: none;
+}
+
+.item-sosmed{
+    margin-right: 30px;
+    text-decoration: none;
+    width: 100px;
+}
+
+.highlight2-contact{
+    position: absolute;
+    top: 65px;
+    left: 45%;
+}
+
+.contact-form{
+    margin-top: 60px;
+}
+
+.input-contact{
+    margin-top:10px;
+}
+
+.textarea{
+    margin-top: 10px;
+}
+
+@media screen and (max-width:992px) {
+    .h1-contact{
+        font-size: 20px;
+        margin-top: 20px;
+    }
+
+    .message{
+        font-size: 15px;
+    }
+
+    .input-name-contact{
+        margin-left:60px;
+    }
+
+    .input-email-contact{
+        margin-left: 65px;
+    }
+    
+    .flex-input{
+        margin-left: 15px;
+    }
+}
+
+@media screen and (max-width:715px) {
+    .h1-contact{
+        font-size: 15px;
+        margin-left: 30px
+    }
+    .message{
+        font-size: 12px;
+    }
+
+    .input-contact{
+        font-size: 15px;
+    }
+
+    .textarea{
+        font-size: 12px;
+        margin-left: 40px;
+    }
+    
+}
+
+@media (max-width:457px) {
+    .flex-input > * {
+        font-size: 8px;
+    }
+}
+
+@media (max-width:547px) {
+    .sosmed-image-contact{
+        width: 20px;
+    }
+
+    .sosmed-h1-contact{
+        font-size: 12px;
+    }
+}

@@ -1,0 +1,6 @@
+.svg-hand{
+    position: absolute;
+    top: 400px;
+    z-index: -1;
+    left: 100px;
+}

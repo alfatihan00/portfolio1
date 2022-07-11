@@ -1,0 +1,184 @@
+.nav-link{
+    display: flex;
+    flex-direction: row;
+    flex-grow: 2;
+    justify-content: center;
+    align-items: center;
+}
+.list-link:hover a{
+    color: #93D67C;
+
+}
+.list-link:hover div{
+    color: #93D67C;
+    filter: invert(80%) sepia(34%) saturate(489%) hue-rotate(57deg) brightness(94%) contrast(88%);
+    -webkit-filter: invert(80%) sepia(34%) saturate(489%) hue-rotate(57deg) brightness(94%) contrast(88%);
+}
+.navigasi{
+    display: flex;
+    flex-direction: row;
+    box-shadow: 0px 4px 4px 0px #00000040;
+    padding: 15px;
+    position: sticky;
+    top: 0px;
+    z-index: 99;
+    background-color: white;
+    
+}
+
+.logo{
+    background-image: url(bahan/nav/Logo.svg);
+    width: 50px;
+    height: 50px;
+}
+
+.icon{
+    width: 24px;
+    height: 24px;
+    background-repeat: no-repeat;
+    margin-left: 30px;
+}
+
+.list-link{
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+}
+
+.link{
+    margin-left: 10px;
+    text-decoration: none;
+    color: black;
+}
+
+.download-cv-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 10px;
+    width: fit-content;
+    height: fit-content;
+    margin-top: 10px;
+    box-shadow: 0px 0px 4px 0px #00000040;
+    background-color: white;
+    cursor: pointer;
+    border: 1px solid white;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+.download-cv-button:hover{
+    scale: 1.1;
+    transition: ease-in-out;
+}
+
+.download-cv-button:active{
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 10px;
+    width: fit-content;
+    height: fit-content;
+    margin-top: 10px;
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 10px;
+
+}
+
+.download-cv-icon{
+    margin-top: 10px;
+}
+
+.active{
+    filter: invert(80%) sepia(34%) saturate(489%) hue-rotate(57deg) brightness(94%) contrast(88%);
+    -webkit-filter: invert(80%) sepia(34%) saturate(489%) hue-rotate(57deg) brightness(94%) contrast(88%);
+}
+
+.active2{
+    color:#93D67C;
+    font-weight: 700;
+}
+
+.hamburger-item{
+    width: 40px;
+    height: 5px;
+    background-color: #a7a7a7;
+    margin-top: 5px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    transition: all ease-in-out;
+}
+
+.hamburger1-active{
+    transform-origin: left;
+    transform: rotateZ(45deg);
+    -webkit-transform: rotateZ(45deg);
+    -moz-transform: rotateZ(45deg);
+    -ms-transform: rotateZ(45deg);
+    -o-transform: rotateZ(45deg);
+    margin-bottom: 7px;
+    transition: all ease-in-out;
+}
+.hamburger3-active{
+    transform-origin: left;
+    transform: rotateZ(-45deg);
+    -webkit-transform: rotateZ(-45deg);
+    -moz-transform: rotateZ(-45deg);
+    -ms-transform: rotateZ(-45deg);
+    -o-transform: rotateZ(-45deg);
+    margin-top: 10px;
+    transition: all ease-in-out
+}
+.hamburger2-active{
+    opacity: 0;
+    transition: all ease-in-out
+}
+
+.hamburger{
+    cursor:pointer;
+    width:fit-content;
+    height: fit-content;
+    align-self:center;
+    display: none;
+    z-index: 9;
+}
+
+.hamburger-layout{
+    position: absolute;
+    top: 0;
+    bottom: -100vh;
+    right: 0;
+    left: 20%;
+    z-index: 8;
+    background:white;
+    box-shadow: -4px 0px 4px 0px #00000040;
+}
+
+.hamburger-link{
+    margin-top: 30px;
+}
+@media screen and (max-width:784px) {
+    .nav-link{
+        display: none;
+    }
+
+    .flex-button-cv{
+        flex-grow: 1;
+        display: flex;
+        justify-content: end;
+        padding-right: 30px;
+        
+    }
+
+    .hamburger{
+        display: block;
+    }
+}

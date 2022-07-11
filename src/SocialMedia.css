@@ -1,0 +1,25 @@
+.social-media{
+    display: flex;
+    flex-direction: column;
+    width: 104px;
+    min-height: 80vh ;
+    align-self: end;
+    position: relative;
+    left: 0;
+    
+}
+
+.sosmed-wrap{
+    width: fit-content;
+    padding-left: 10px;
+}
+
+@media screen and (max-width:844px) {
+    .sosmed-icon-sosmed{
+        width: 25px;
+    }
+
+    .sosmed-wrap{
+        margin-top: 20px;
+    }
+}

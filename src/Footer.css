@@ -1,0 +1,118 @@
+.footer {
+    background-color: #282828;
+    height: 300px;
+    padding-bottom: 80px;
+    padding-top: 40px;
+    padding-left: 40px
+}
+
+.footer-nav {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.footer-nav h1,
+.footer-nav a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+}
+
+.sosmed-icon-footer {
+    width: 250px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    
+
+}
+
+.item-sosmed{
+    width: 80px;
+}
+
+.sosmed-h1-footer {
+    color: white;
+
+}
+
+.sosmed-image-footer {
+    filter: invert(100%) sepia(0%) saturate(7468%) hue-rotate(359deg) brightness(105%) contrast(78%);
+}
+
+.footer-sosmed {
+    margin-left: 30px;
+}
+
+.follow {
+    color: white;
+}
+
+.copyrighted {
+    color: white;
+    position: absolute;
+    bottom: 20px;
+    text-align: center;
+    left: 30%;
+}
+
+@media screen and (max-width:992px) {
+    .follow{
+        font-size: 16px;
+    }
+    .jelajahi{
+        font-size:16px;
+    }
+    .footer-a{
+        font-size:12px
+    }
+}
+
+@media screen and (max-width:912px) {
+    .copyrighted{
+        left:20%
+    }
+}
+@media screen and (max-width:675px) {
+    .copyrighted{
+        left:15%;
+        font-size:12px;
+    }
+}
+
+@media (max-width:383px) {
+    .copyrighted{
+        width: 250px;
+    }
+
+    .follow{
+        width: 100px;
+    }
+
+    .sosmed-icon-footer{
+        width: 180px;
+    }
+    .sosmed-image-footer{
+        width: 20px;
+    }
+
+    .sosmed-h1-footer{
+        font-size: 12px;
+    }
+
+    .item-sosmed{
+        margin: 0px;
+    }
+
+    .footer{
+        max-width: 100%;
+    }
+    
+    
+}
