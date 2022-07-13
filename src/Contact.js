@@ -2,9 +2,9 @@ import React from 'react'
 import SocialMedia from './SocialMedia'
 import DotNav from './DotNav'
 import './Contact.css'
-import call from './bahan/nav/call.svg'
+import Call from './bahan/nav/call.js'
 import Highlight2 from "./bahan/About/highlight2.js";
-import mail from './bahan/Contact/mail.svg'
+import Mail from './bahan/Contact/mail.js'
 import dataSosmedContact from './dataSosmedContact'
 
 const Contact = ({location, setLocation}) => {
@@ -17,7 +17,7 @@ const Contact = ({location, setLocation}) => {
 
         {/* Title */}
         <div className='contact-title'>
-          <h1><img src={call} alt="call" className='contact-call'/> Contact</h1>
+          <h1><Call /> Contact</h1>
           <Highlight2 />
         </div>
 
@@ -42,13 +42,13 @@ const Contact = ({location, setLocation}) => {
             <textarea className="textarea" placeholder="Your Message..."></textarea>
           </div>
 
-          <button className='send-message'><img src={mail} alt="message" className='message-icon' /> Send Message</button>
+          <button className='send-message'><Mail />Send Message</button>
         </form>
 
         <div className="sosmed-contact">
           {dataSosmedContact.map((data)=>{
             return(
-              <a href='' key={data.name} className='item-sosmed'>
+              <a href='#contact' key={data.name} className='item-sosmed'>
                 <img src={data.img} alt="img" className='sosmed-image-contact' />
                 <p className='sosmed-h1-contact'>{data.name}</p>
               </a>
@@ -60,7 +60,7 @@ const Contact = ({location, setLocation}) => {
 
 
       
-      <DotNav location={location} />
+      <DotNav setLocation={setLocation} location={location} />
   </div>
   )
 }

@@ -17,7 +17,7 @@ const Footer = () => {
         <div className='footer-sosmed'>
             <h1 className='follow'>Follow me:</h1>
             <div className='sosmed-icon-footer'>
-                {dataSosmedContact.map((data)=><a href='' key={data.name} className='item-sosmed'>
+                {dataSosmedContact.map((data)=><a href='#footer' key={data.name} className='item-sosmed'>
                     <img src={data.img} alt="img" className='sosmed-image-footer' />
                     <p className='sosmed-h1-footer'>{data.name}</p>
                 </a>)}

@@ -1,14 +1,13 @@
 import React from 'react'
 import './DotNav.css'
-import { motion } from "framer-motion";
 
-const DotNav = ({location}) => {
+const DotNav = ({location, setLocation}) => {
   return (
     <div className='dot-navigation'>
         {['home', 'about', 'portfolio', 'contact'].map((dot)=>
         {
           return(
-            <a key={dot} href={`#${dot}`} className={`dot-nav dot-nav-${dot} ${location === dot && `active-dot`}`} />
+            <a onClick={()=>setLocation(dot)} key={dot} href={`#${dot}`} className={`dot-nav dot-nav-${dot} ${location === dot && `active-dot`}`}>.</a>
             
           )
         })}

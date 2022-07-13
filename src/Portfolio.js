@@ -2,11 +2,11 @@ import React,{useState} from 'react'
 import './Portfolio.css'
 import SocialMedia from './SocialMedia'
 import DotNav from './DotNav'
-import doc from './bahan/nav/doc.svg'
+import Doc from './bahan/nav/doc.js'
 import Highlight2 from './bahan/About/highlight2.js'
 import portfolioData from './PortfolioData'
-import arrowRight from './bahan/About/arrow-doodle-right.svg'
-import arrowLeft from './bahan/About/arrow-doodle-left.svg'
+import ArrowRight from './bahan/Portfolio/ArrowRight'
+import ArrowLeft from './bahan/Portfolio/ArrowLeft.js'
 import Skill from './Skill'
 import ArrowHand from './bahan/Portfolio/arrow-hand-ver2.js'
 import pencil from './bahan/Header/grid-kiri-head/pencil.svg'
@@ -83,7 +83,7 @@ const Portfolio = ({location, setLocation}) => {
         <div className='header-portfolio'>
 
           {/* JUDUL */}
-          <h1><img src={doc} alt="doc" className='portfolio-doc'/> Portfolio <img src={pencil} alt="pencil" /></h1>
+          <h1><Doc /> Portfolio <img src={pencil} alt="pencil" /></h1>
           <Highlight2 />
 
 
@@ -143,7 +143,7 @@ const Portfolio = ({location, setLocation}) => {
             
           </div>
 
-          <img src={arrowLeft} alt="arrowleft" className='arrow-left-portfolio' onClick={handleClick3}/>
+          <ArrowLeft handleClick3={handleClick3} />
         </motion.div> : 
 
         // Carrousel1
@@ -185,7 +185,7 @@ const Portfolio = ({location, setLocation}) => {
             </div> */}
           </motion.ul>
           <div className='my-skill'>
-            <img src={arrowRight} alt="arrow" className='arrow-right-portfolio' onClick={handleClick2} />
+            <ArrowRight handleClick2={handleClick2} />
             <p className='next-p'>check my skill</p>
           </div>
 
@@ -193,7 +193,7 @@ const Portfolio = ({location, setLocation}) => {
         </motion.div>}
 
       </div>
-      <DotNav location={location} />
+      <DotNav setLocation={setLocation} location={location} />
     </div>
   )
 }

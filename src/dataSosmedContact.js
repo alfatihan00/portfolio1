@@ -4,7 +4,6 @@ import linkedIn from './bahan/sosmed/linkedin.svg'
 import github from './bahan/sosmed/github.svg'
 import upwork from './bahan/sosmed/upwork.svg'
 import fiverr from './bahan/sosmed/fiverr.svg'
-import certificate from './bahan/About/certificate.jpg'
 
 
 const dataSosmedContact = [

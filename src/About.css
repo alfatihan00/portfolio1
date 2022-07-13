@@ -204,3 +204,14 @@
     }
     
 }
+
+@media (max-width:510px) {
+    .certificate{
+        width: 150px;
+    }
+}
+@media (max-width:410px) {
+    .certificate{
+        width: 100px;
+    }
+}

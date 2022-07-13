@@ -2,13 +2,13 @@ import React,{useState} from 'react'
 import './About.css'
 import DotNav from './DotNav'
 import SocialMedia from './SocialMedia'
-import user from './bahan/nav/user.svg'
+import User from './bahan/nav/user.js'
 import sosmedData from './sosmedData'
-import arrowDoodleLeft from './bahan/About/arrow-doodle-left.svg'
-import arrowDoodleRight from './bahan/About/arrow-doodle-right.svg'
-import selotipPink from './bahan/About/selotip-pink.svg'
+import ArrowDoodleLeft from './bahan/About/arrowDoodleLeft.js'
+import ArrowDoodleRight from './bahan/About/ArrowDoodleRight.js'
+import SelotipPink from './bahan/About/selotipPink.js'
 import Highlight2 from './bahan/About/highlight2.js'
-import arrowHand from './bahan/About/arrow-hand-ver.svg'
+import ArrowHand from './bahan/About/arrowHandVer.js'
 import {motion} from 'framer-motion'
 
 
@@ -21,18 +21,18 @@ const About = ({setLocation, location}) => {
       <SocialMedia />
       <div className='about-container'>
         <div className='about-tilte'>
-          <h1 className='title-about'><img src={user} alt="user" className='about-user'/> About me</h1>
+          <h1 className='title-about'><User/> About me</h1>
           <Highlight2 />
 
 
         </div>
         <div className='about-carrousel' >
-          <motion.img initial={{y:100, opacity:0}} transition={{delay:0.5}} whileInView={{y:0, opacity:1}} src={arrowHand} alt="arrowHand" className='arrow-hand-about' />
-          {sosmedData[counter-1].map((data)=>{
+          <ArrowHand />
+          {sosmedData[counter-1].map((data, index)=>{
             
             return counter === 4 ? (
-            <motion.div whileInView={{y:0, opacity:1}} initial={{y:-100, opacity:0}} transition={{type:'spring'}} className='sosmed-detail2'>
-              <img src={selotipPink} alt="selotip" className='selotip'/>
+            <motion.div key={index} whileInView={{y:0, opacity:1}} initial={{y:-100, opacity:0}} transition={{type:'spring'}} className='sosmed-detail2'>
+              <SelotipPink />
 
               {data.certificate.map((certificate)=> {
                 return (
@@ -42,7 +42,7 @@ const About = ({setLocation, location}) => {
             </motion.div>) : (
               
               <motion.div whileInView={{y:0, opacity:1}} initial={{y:-100, opacity:0}} transition={{ type:'spring'}} key={data.name} className='sosmed-detail'>
-                <img src={selotipPink} alt="selotip" className='selotip'/>
+                <SelotipPink />
 
                 <img src={data.img} alt={data.name} className='sosmed-logo'/>
                 <h1 className='sosmed-about-h1'>{data.name}</h1>
@@ -57,18 +57,18 @@ const About = ({setLocation, location}) => {
 
 
         <motion.div whileInView={{x:0, opacity:1}} initial={{x:-100, opacity:0 }} transition={{delay:0.4}} className={`${counter === 4 && `marginTop`} navigasi-carrousel`}>
-          {counter !== 1 && <motion.img whileHover={{scale:1.1}} src={arrowDoodleLeft} alt="arrow-left" className='about-arrow-left' onClick={()=>setCounter((pastCount)=>pastCount-1)}/>}
+          {counter !== 1 && <ArrowDoodleLeft setCounter={setCounter}/>}
           <div className='dot-carrousel'>
             <div className={`dot-about ${counter === 1 && `active-dot-about` }` } onClick={()=>setCounter(1)} ></div>
             <div className={`dot-about ${counter === 2 && `active-dot-about` }` } onClick={()=>setCounter(2)} ></div>
             <div className={`dot-about ${counter === 3 && `active-dot-about` }` } onClick={()=>setCounter(3)} ></div>
             <div className={`dot-about ${counter === 4 && `active-dot-about` }` } onClick={()=>setCounter(4)} ></div>
           </div>
-          {counter !== 4 && <motion.img whileHover={{scale:1.1}} src={arrowDoodleRight} alt="arrow-right" className='about-arrow-right' onClick={()=>setCounter((pastCount)=>pastCount+1)} />}
+          {counter !== 4 && <ArrowDoodleRight setCounter={setCounter}/>}
 
         </motion.div>
       </div>
-      <DotNav location={location} />
+      <DotNav setLocation={setLocation} location={location} />
     </div>
 
   )
